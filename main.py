@@ -77,14 +77,14 @@ def main():
 
     with open ('output/average.csv', 'w') as output:
         writer = csv.writer(output, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(("Pump A Energy Total", int(A.total_energy_cost)))
-        writer.writerow(("Pump A Repair Total", int(A.total_repair_cost)))
-        writer.writerow(("Pump B Energy Total", int(B.total_energy_cost)))
-        writer.writerow(("Pump B Repair Total", int(B.total_repair_cost)))
-        writer.writerow(("Pump A Energy Yearly", int(A.total_energy_cost / YEARS)))
-        writer.writerow(("Pump A Repair Yearly", int(A.total_repair_cost / YEARS)))
-        writer.writerow(("Pump B Energy Yearly", int(B.total_energy_cost / YEARS)))
-        writer.writerow(("Pump B Repair Yearly", int(B.total_repair_cost / YEARS)))
+        writer.writerow(("Pump A Energy Total Cost", int(A.total_energy_cost)))
+        writer.writerow(("Pump A Repair Total Cost", int(A.total_repair_cost)))
+        writer.writerow(("Pump B Energy Total Cost", int(B.total_energy_cost)))
+        writer.writerow(("Pump B Repair Total Cost", int(B.total_repair_cost)))
+        writer.writerow(("Pump A Energy Yearly Cost", int(A.total_energy_cost / YEARS)))
+        writer.writerow(("Pump A Repair Yearly Cost", int(A.total_repair_cost / YEARS)))
+        writer.writerow(("Pump B Energy Yearly Cost", int(B.total_energy_cost / YEARS)))
+        writer.writerow(("Pump B Repair Yearly Cost", int(B.total_repair_cost / YEARS)))
 
 def convert_to_gpm(flowrate):
     return ((flowrate * 1000000) / 1440)
